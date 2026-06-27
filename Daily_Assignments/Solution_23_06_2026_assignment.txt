@@ -1,0 +1,113 @@
+1.Assignment 1: ASCII Code Program
+Question:
+Write a Java program to print the ASCII value of the following characters:
+•	A 
+•	a 
+•	0 
+•	@ 
+Expected Output:
+ASCII value of A = 65
+ASCII value of a = 97
+ASCII value of 0 = 48
+ASCII value of @ = 64
+
+Solution:
+
+package dailyassigments;
+
+public class Assignment2_ASCIIValue {
+
+	public static void main(String[] args) {
+		//ASCII Value of A
+		char alpha = 'A';
+		int A_value = alpha;
+		System.out.println("ASCII value of A = "+A_value);
+		
+		//ASCII Value of a
+		char beta = 'a';
+		int a_value = beta;
+		System.out.println("ASCII value of a = "+a_value);
+		
+		//ASCII Value of 0
+		char gamma = '0';
+		int zero_value = gamma;
+		System.out.println("ASCII value of 0 = "+zero_value);
+		
+		//ASCII Value of @
+		char test = '@';
+		int at_the_rate_value = test;
+		System.out.println("ASCII value of @ = "+at_the_rate_value);
+		
+	}
+
+}
+
+Output:
+ASCII value of A = 65
+ASCII value of a = 97
+ASCII value of 0 = 48
+ASCII value of @ = 64
+============================================================================================================
+Assignment 2: Print Triangle using println()
+Question:
+Write a Java program to print the following triangle pattern using only System.out.println() statements.
+Expected Output:
+*
+**
+***
+****
+*****
+Hint: Use 5 separate println statements.
+
+
+Solution:
+
+package dailyassigments;
+
+public class Assignment2_PrintTriangle {
+	public static void main(String[] args) {
+		System.out.println("*");
+		System.out.println("**");
+		System.out.println("***");
+		System.out.println("****");
+		System.out.println("*****");		
+	}
+}
+
+Output:
+
+*
+**
+***
+****
+*****
+==========================================================================================================
+Assignment 3: Type Casting
+Question:
+Create a Java program that:
+1.	Stores 10.75 in a double variable. 
+2.	Explicitly typecasts it to an int variable. 
+3.	Prints both values.
+
+
+Solution:
+
+package dailyassigments;
+
+public class Assignment2_ExplicitlyTypecast {
+
+	public static void main(String[] args) {
+		double product_price = 10.75;
+		int product_price_int = (int)product_price;
+		System.out.println("Original product price in double = "+product_price);
+		System.out.println("product price after explicitly typecast to int = "+product_price_int);
+		
+
+	}
+
+}
+
+Output:
+Original product price in double = 10.75
+product price after explicitly typecast to int = 10
+
