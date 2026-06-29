@@ -1,0 +1,213 @@
+1) Factorial of a Number
+Question:
+Write a Java program to calculate the factorial of 6 using a loop.
+Expected Output:
+Factorial of 6 = 720
+
+
+Solution:
+
+package weeklyassigments;
+
+public class Assignment1_FactorialOfANumber {
+	public static void main(String[] args) {
+		int num=6;
+		int factorial =1;
+		for(int i=1;i<=6;i++)
+		{
+			factorial=factorial*i;
+		}
+		System.out.println("Factorial of "+num+" is = "+factorial);
+	}
+}
+
+Output:
+
+Factorial of 6 is = 720
+
+===========================================================================================
+
+2) Count Digits
+Question:
+Write a Java program to count the number of digits in the number 987654 using a loop.
+Expected Output:
+Number of digits = 6
+
+Solution:
+
+package weeklyassigments;
+
+public class Assignment1_CountDigits {
+	public static void main(String[] args) {
+		int num = 987654;
+		int count = 0;
+		for (;num!=0;num=num/10)
+		{
+			count++;
+		}
+		System.out.println("Number of digits: " + count);
+	}
+
+}
+
+//using while loop
+package weeklyassigments;
+
+public class Assignment1_CountDigits {
+	public static void main(String[] args) {
+ int number = 987654;
+        int count = 0;
+
+        while (number != 0) {
+            number = number / 10;
+            count++;
+        }
+
+        System.out.println("Number of digits: " + count);
+    }
+}
+
+
+Output:
+Number of digits: 6
+
+==========================================================================================
+3) Sum of Digits
+Question:
+Write a Java program to find the sum of digits of the number 4567.
+Expected Output:
+Sum of digits = 22
+
+
+Solution:
+
+package weeklyassigments;
+
+public class Assignment1_SumOfDigits {
+	public static void main(String[] args) {
+		int number = 4567;
+        int sum = 0;
+
+        for (int temp = number; temp != 0; temp = temp / 10) {
+
+            int digit = temp % 10;
+            sum = sum + digit;
+        }
+        System.out.println("Sum of digits = " + sum);
+	}
+}
+
+//usig while loop
+
+/*
+ package weeklyassigments;
+
+public class Assignment1_SumOfDigits {
+	public static void main(String[] args) {
+ int number = 4567;
+        int sum = 0;
+
+        while (number != 0) {
+
+            int digit = number % 10;
+            sum = sum + digit;
+            number = number / 10;
+        }
+
+        System.out.println("Sum of digits = " + sum);
+        	}
+}
+ */
+
+
+
+Output:
+Sum of digits = 22
+
+===========================================================================================
+4) Question: Print Factors of a Number
+Question:
+Write a Java program to print all the factors of the number 24 using a loop.
+A factor is a number that divides another number completely without leaving a remainder.
+Expected Output:
+Factors of 24 are:
+1
+2
+3
+4
+6
+8
+12
+24
+
+
+Solution:
+
+package weeklyassigments;
+
+public class Assignment1_FactorsOfNumber {
+	public static void main(String[] args) {
+		int number = 24;
+        System.out.println("Factors of " + number + " are:");
+
+        for (int i = 1; i <= number; i++) {
+
+            if (number % i == 0) {
+                System.out.println(i + " ");
+            }
+        }
+	}
+}
+
+
+Output:
+Factors of 24 are:
+1 
+2 
+3 
+4 
+6 
+8 
+12 
+24 
+
+============================================================================================
+
+5)Print Fibonacci Series
+Question:
+Write a Java program to print the first 10 terms of the Fibonacci series using a loop.
+Expected Output:
+0 1 1 2 3 5 8 13 21 34
+
+
+Solution:
+
+package weeklyassigments;
+
+public class Assignment1_FibonacciSeries {
+
+	public static void main(String[] args) {
+		 int first = 0;
+	        int second = 1;
+	        int next;
+
+	        System.out.println("First 10 terms of Fibonacci Series:");
+
+	        for (int i = 1; i <= 10; i++) {
+
+	            System.out.print(first + " ");
+
+	            next = first + second;
+	            first = second;
+	            second = next;
+	        }
+
+	}
+
+}
+
+
+
+Output:
+First 10 terms of Fibonacci Series:
+0 1 1 2 3 5 8 13 21 34 
