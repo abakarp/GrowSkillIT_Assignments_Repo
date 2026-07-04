@@ -1,0 +1,82 @@
+ solve below questions using while loop
+
+1)Print every alternate uppercase letter
+
+Output:
+A C E G I ... Y
+
+Solution:
+
+package dailyassigments;
+
+public class Assignment5_AlternateUppercaseLetter {
+
+	public static void main(String[] args) {
+		
+		char ch = 'A';
+		while(ch<='Z')
+		{
+			System.out.print(ch+" ");
+			ch+=2;
+		}
+	}
+
+}
+
+Output:
+A C E G I K M O Q S U W Y 
+
+========================================================================
+
+2)Print ASCII values of A to Z
+
+Output:
+A = 65
+B = 66
+...
+Z = 90
+
+Solution 
+
+package dailyassigments;
+
+public class Assignment5_ASCII_ValuesA_Z {
+
+	public static void main(String[] args) {
+		
+		char ch ='A';
+		while(ch<='Z') {
+			System.out.println(ch + " = " + (int) ch);
+			ch++;
+		}
+	}
+}
+
+output:
+
+A = 65
+B = 66
+C = 67
+D = 68
+E = 69
+F = 70
+G = 71
+H = 72
+I = 73
+J = 74
+K = 75
+L = 76
+M = 77
+N = 78
+O = 79
+P = 80
+Q = 81
+R = 82
+S = 83
+T = 84
+U = 85
+V = 86
+W = 87
+X = 88
+Y = 89
+Z = 90
