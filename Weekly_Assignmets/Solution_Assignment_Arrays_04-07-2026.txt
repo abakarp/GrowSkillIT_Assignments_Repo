@@ -1,0 +1,176 @@
+Question 1: Remove Duplicate Prints
+Problem Statement
+Print only the unique elements from an array.
+Do not use another array or any collection.
+Sample Input
+int arr[] = {5, 3, 8, 5, 2, 3, 9, 8};
+Expected Output
+5
+3
+8
+2
+9
+
+
+Solution:
+package weeklyassigments;
+
+public class Assignment2_UniqueElements {
+
+	public static void main(String[] args) {
+				int[] arr={5, 3, 8, 5, 2, 3, 9, 8};
+		for(int i=0;i<arr.length;i++)
+		{
+			boolean isDuplicate=false;
+			for(int j=0;j<i;j++)
+			{
+				if(arr[i]==arr[j])
+				{
+					isDuplicate=true;
+					break;
+				}
+			}
+			if(!isDuplicate)
+			{
+				System.out.println(arr[i] + " ");
+			}
+		}
+		
+	}
+
+}
+
+
+Output:
+5
+3
+8
+2
+9
+
+==================================================================================
+
+Question 2: Find Common Elements
+Problem Statement
+Given two integer arrays of the same size, print all common elements.
+Avoid printing duplicate common elements.
+Sample Input
+int arr1[] = {2, 5, 7, 9, 11, 5};
+int arr2[] = {1, 5, 7, 15, 20, 5};
+Expected Output
+5
+7
+
+Solution:
+
+package weeklyassigments;
+
+public class Assignment2_Arrays_CommonElements {
+
+	public static void main(String[] args) {
+				
+		int[] arr1 = {2, 5, 7, 9, 11, 5};
+		int[] arr2 = {1, 5, 7, 15, 20, 5};
+		
+		System.out.println("Distinct Common Elements:");
+
+        for (int i = 0; i < arr1.length; i++) 
+        {
+            boolean alreadyPrinted = false;
+
+            // Check if arr1[i] has already appeared
+            for (int k = 0; k < i; k++) 
+            {
+                if (arr1[i] == arr1[k]) 
+                {
+                    alreadyPrinted = true;
+                    break;
+                }
+            }
+
+            if (alreadyPrinted) 
+            {
+                continue;
+            }
+
+            // Check if present in arr2
+            for (int j = 0; j < arr2.length; j++) 
+            {
+                if (arr1[i] == arr2[j]) {
+                    System.out.println(arr1[i]);
+                    break;
+                }
+            }
+        }
+
+	}
+
+}
+
+Output:
+Distinct Common Elements:
+5
+7
+
+============================================================================
+Question 3: Frequency of Each Element
+Problem Statement
+Print the frequency of every unique element in the array.
+Do not print the frequency of the same element more than once.
+Sample Input
+int arr[] = {4, 2, 4, 6, 2, 2, 7};
+Expected Output
+4 occurs 2 times
+2 occurs 3 times
+6 occurs 1 time
+7 occurs 1 time
+
+
+Solution:
+
+package weeklyassigments;
+
+public class Assignment_2_Arrays_FrequencyOfEachElement {
+
+	public static void main(String[] args) {
+				
+		 int arr[] = {4, 2, 4, 6, 2, 2, 7};
+
+	        for (int i = 0; i < arr.length; i++) {
+
+	            int count = 1;
+	            boolean visited = false;
+
+	            // Check if the element is already processed
+	            for (int k = 0; k < i; k++) {
+	                if (arr[i] == arr[k]) {
+	                    visited = true;
+	                    break;
+	                }
+	            }
+
+	            if (visited) {
+	                continue;
+	            }
+
+	            // Count frequency
+	            for (int j = i + 1; j < arr.length; j++) {
+	                if (arr[i] == arr[j]) {
+	                    count++;
+	                }
+	            }
+
+	            System.out.println(arr[i] + " occurs " + count + " time");
+	        }
+
+	}
+
+}
+
+Output:
+
+4 occurs 2 time
+2 occurs 3 time
+6 occurs 1 time
+7 occurs 1 time
+
