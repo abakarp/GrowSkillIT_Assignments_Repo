@@ -1,0 +1,65 @@
+package dailyassigments;
+
+import java.util.List;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Assignment7_Selenium_Automation_Practice_Form {
+
+	public static void main(String[] args) throws Throwable {
+		WebDriver driver =new ChromeDriver();
+		driver.get("https://files.wiseapp.live/upload_files/6932afb3c05630afe5a997f1/upload_997951c3-ea02-4bd1-94eb-4dfb62b41407.html");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		//Inputbox
+		WebElement nameInputBox=driver.findElement(By.id("userName"));
+		nameInputBox.sendKeys("Shreya sharma");
+		Thread.sleep(3000);
+		
+		//select dropdown
+		WebElement selectCityTag=driver.findElement(By.id("city"));
+		Select selectCity=new Select(selectCityTag);
+		selectCity.selectByVisibleText("Mumbai");
+		Thread.sleep(3000);
+		
+		//checkbox and select all using loop
+		List<WebElement> skillCheckboxes=driver.findElements(By.name("skills"));
+		for(WebElement checkbox:skillCheckboxes)
+		{
+			if(!checkbox.isSelected())
+			{
+				checkbox.click();
+			}
+		}
+		
+		//radio button
+		driver.findElement(By.id("female")).click();
+		
+		//click submit button to validate
+		driver.findElement(By.id("submitButton")).click();
+		
+		//popup -click on ok
+		Alert submitPopup=driver.switchTo().alert();
+		System.out.println(submitPopup.getText());
+		Thread.sleep(3000);
+		submitPopup.accept();
+		Thread.sleep(3000);
+		
+		driver.quit();
+		
+		
+	}
+
+}
+
+Output
+
+Name: Shreya sharma
+City: Mumbai
+Gender: Female
+Skills: Selenium, Playwright, Java, SQL
